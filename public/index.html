@@ -1,13 +1,526 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+  <!--Font-Awsome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link href="./css/styles.css" rel="stylesheet">
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+
+<body class="font-open dark">
+
+<!--Dark Light Mode-->
+<div class="absolute top-1 left-5 cursor-pointer text-lg">
+  <i class="fa-solid fa-sun text-white" id="sun"></i>
+  <i class="fa-solid fa-moon text-black hidden" id="moon"></i>
+</div>
+
+  <!--Header Section-->
+  <header class="dark:bg-black bg-white py-6 lg:py-12 dark:text-t-grey text-black font-gemunu uppercase">
+    <!--Header Container-->
+    <div class="container flex items-center justify-between space-x-8 lg:space-x-16">
+      <!--Logo-->
+      <a href="#"
+        class="pl-4 md:pl-0 text-4xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-t-red to-t-white">TEWİ</a>
+
+      <!--Mobile Menu-->
+      <div class="block md:hidden pr-4">
+        <div class="space-y-1 cursor-pointer">
+          <div class="bg-t-grey w-8 h-1 rounded-full"></div>
+          <div class="bg-t-grey w-8 h-1 rounded-full"></div>
+          <div class="bg-t-grey w-8 h-1 rounded-full"></div>
+        </div>
+      </div>
+
+      <!--Navigation-->
+      <nav class="hidden md:flex justify-between flex-1 ">
+        <!--Menu-->
+        <div class="flex items-center lg:text-lg space-x-4 lg:space-x-8 ">
+          <a href="#" class="hover:text-t-melon transation duration-500">posts</a>
+          <a href="#" class="hover:text-t-melon transation duration-500">contents</a>
+          <a href="#" class="hover:text-t-melon transation duration-500">blog</a>
+          <a href="#" class="hover:text-t-melon transation duration-500">news</a>
+          <a href="#" class="hover:text-t-melon transation duration-500">about</a>
+        </div>
+        <!--Login Area-->
+        <div class="flex items-center space-x-4 lg:space-x-8">
+          <!--Search Area-->
+          <form action="">
+            <div class="group border-r px-4 mx-4 py-1 border-t-red">
+              <input type="text"
+                class="transition duration-500    opacity-0 group-hover:opacity-100 bg-transparent border-b border-t-red text-white placeholder-white outline-none w-24 lg:w-44"
+                style="background-color: transparent;" placeholder="Search">
+              <button class="-ml-4 group-hover:ml-0 transition duration-500"><i
+                  class="fas fa-search group-hover:text-t-red"></i></button>
+            </div>
+          </form>
+          <!--Sign-up Area-->
+          <div class="flex items-center space-x-4 lg:space-x-8 lg:text-lg">
+            <a href="#">login</a>
+            <a href="#"
+              class="bg-t-red px-3 py-1 hover:bg-rose-600 hover:text-t-grey cursor-pointer tranit duration-500 whitespace-nowrap">sign
+              up</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!--Hero Section-->
+  <section class="h-96 lg:h-128 group relative ">
+    <!--Hero Image-->
+    <img src="./images/the-sandman.png" alt="Main Image" class="h-full w-full object-cover">
+
+    <!--Hero Content-->
+    <div class="absolute bottom-0 w-full bg-gradient-to-b from-transparent to-black">
+      <!--Hero Content Container-->
+      <div class="container pl-10 lg:pl-0">
+        <h3 class="text-t-melon tracking-wider group-hover:mb-1 duration-500">
+          Drama, Mystery, Fantasy, Advanture
+        </h3>
+        <h1 class="text-4xl lg:text-6xl text-t-grey  group-hover:mb-1 duration-500">the sandman</h1>
+        <p class="text-t-grey  group-hover:mb-2 duration-500 text-sm lg:text-base w-3/4 lg:w-2/3">
+          The Sandman by Neil Gaiman follows Dream (Morpheus) blending fantasy, horror, drama, and mythology.
+        </p>
+        <!--Detail Container-->
+        <div
+          class="flex space-x-8 opacity-0 group-hover:opacity-100 group-hover:mb-10 lg:group-hover:mb-20 duration-1000">
+          <!--Watch-->
+          <div class="flex space-x-2 items-center cursor-pointer">
+            <a href="#" class="text-t-grey uppercase lg:text-lg hover:text-t-red duration-500">Watch Trailer</a>
+            <div class="flex h-8 w-8 text-center rounded-full items-center justify-center bg-t-red text-t-grey">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <!--Info-->
+          <div class="flex space-x-2 items-center cursor-pointer">
+            <a href="#" class="text-t-grey uppercase lg:text-lg hover:text-t-red duration-500">full synopsis</a>
+            <div class="flex h-8 w-8 text-center rounded-full items-center justify-center bg-t-red text-t-grey">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!--Points-->
+    <div class="flex  space-x-3 absolute bottom-5 left-10 opacity-0 group-hover:opacity-100 duration-1000">
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-t-grey"></div>
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-t-grey"></div>
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-t-grey"></div>
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-t-grey"></div>
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-t-grey"></div>
+    </div>
+  </section>
+
+  <!--Movies Section-->
+  <section class="py-24 dark:bg-black bg-white">
+<!--Movies Content-->
+<div class="container flex flex-col lg:flex-row lg:space-x-16 space-y-8 lg:space-y-0">
+  <!--Left Content-->
+  <div class="basis-2/3">
+    <!--Titles-->
+    <div class="flex space-x-2 divide-x divide-t-red divide-opacity-50 mb-8 pl-10 lg:pl-0">
+      <h2 class="text-t-red "><a href="#">latest</a></h2>
+      <h2 class="text-t-grey pl-2 hover:text-t-red duration-500"><a href="#">popular</a></h2>
+      <h2 class="text-t-grey pl-2 hover:text-t-red duration-500"><a href="#">best</a></h2>
+    </div>
+    <!--Images Container-->
+    <div class="flex flex-wrap">
+      <!--Image-1-->
+      <div class="group relative overflow-hidden basis-1/3 md:basis-1/4 lg:basis-1/3">
+        <!--Image-->
+        <img src="./images/1.jpg" class="group-hover:scale-110 group-hover:opacity-50 duration-500">
+        <!--Image Detail Container-->
+        <div class="absolute px-6 bottom-8">
+          <h3 class="text-t-grey group-hover:text-t-melon group-hover:mb-2 duration-500">arrival</h3>
+          <p class="text-xs opacity-0 group-hover:opacity-100 group-hover:mb-10 duration-500 text-t-grey">Aliens arrive, linguist deciphers language, humanity's fate, thought-provoking sci-fi.</p>
+          <!--Icons Container-->
+          <div class=" absolute flex space-x-8 text-t-grey opacity-1 -bottom-2 group-hover:opacity-100 duration-500 ">
+            <a class="hover:text-t-red" href="#"><i class="fa-solid fa-play"></i></a>
+            <a class="hover:text-t-red"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <!--Image-2-->
+      <div class="group relative overflow-hidden basis-1/3 md:basis-1/4 lg:basis-1/3">
+        <!--Image-->
+        <img src="./images/2.jpg" class="group-hover:scale-110 group-hover:opacity-50 duration-500">
+        <!--Image Detail Container-->
+        <div class="absolute px-6 bottom-8">
+          <h3 class="text-t-grey group-hover:text-t-melon group-hover:mb-2 duration-500">elfie gray</h3>
+          <p class="text-xs opacity-0 group-hover:opacity-100 group-hover:mb-10 duration-500 text-t-grey">Victorian marriage, art, scandal, legal battle, love, betrayal, emotional journey.</p>
+          <!--Icons Container-->
+          <div class=" absolute flex space-x-8 text-t-grey opacity-1 -bottom-2 group-hover:opacity-100 duration-500 ">
+            <a class="hover:text-t-red" href="#"><i class="fa-solid fa-play"></i></a>
+            <a class="hover:text-t-red"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+       <!--Image-3-->
+       <div class="group relative overflow-hidden basis-1/3 md:basis-1/4 lg:basis-1/3">
+        <!--Image-->
+        <img src="./images/3.jpeg" class="group-hover:scale-110 group-hover:opacity-50 duration-500">
+        <!--Image Detail Container-->
+        <div class="absolute px-6 bottom-8">
+          <h3 class="text-t-grey group-hover:text-t-melon group-hover:mb-2 duration-500">black widow</h3>
+          <p class="text-xs opacity-0 group-hover:opacity-100 group-hover:mb-10 duration-500 text-t-grey">Spy thriller, Natasha Romanoff, past secrets, family, action-packed, Marvel adventure.</p>
+          <!--Icons Container-->
+          <div class=" absolute flex space-x-8 text-t-grey opacity-1 -bottom-2 group-hover:opacity-100 duration-500 ">
+            <a class="hover:text-t-red" href="#"><i class="fa-solid fa-play"></i></a>
+            <a class="hover:text-t-red"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+       <!--Image-4-->
+       <div class="group relative overflow-hidden basis-1/3 md:basis-1/4 lg:basis-1/3">
+        <!--Image-->
+        <img src="./images/4.png" class="group-hover:scale-110 group-hover:opacity-50 duration-500">
+        <!--Image Detail Container-->
+        <div class="absolute px-6 bottom-8">
+          <h3 class="text-t-grey group-hover:text-t-melon group-hover:mb-2 duration-500">deadpool</h3>
+          <p class="text-xs opacity-0 group-hover:opacity-100 group-hover:mb-10 duration-500 text-t-grey">Antihero, humor, revenge, breaking fourth wall, action, romance, Marvel, irreverent.</p>
+          <!--Icons Container-->
+          <div class=" absolute flex space-x-8 text-t-grey opacity-1 -bottom-2 group-hover:opacity-100 duration-500 ">
+            <a class="hover:text-t-red" href="#"><i class="fa-solid fa-play"></i></a>
+            <a class="hover:text-t-red"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <!--Image-5-->
+      <div class="group relative overflow-hidden basis-1/3 md:basis-1/4 lg:basis-1/3">
+        <!--Image-->
+        <img src="./images/5.jpg" class="group-hover:scale-110 group-hover:opacity-50 duration-500">
+        <!--Image Detail Container-->
+        <div class="absolute px-6 bottom-8">
+          <h3 class="text-t-grey group-hover:text-t-melon group-hover:mb-2 duration-500">Doctor sleep</h3>
+          <p class="text-xs opacity-0 group-hover:opacity-100 group-hover:mb-10 duration-500 text-t-grey">Shining sequel, Danny Torrance, haunted past, supernatural cult, intense thriller.</p>
+          <!--Icons Container-->
+          <div class=" absolute flex space-x-8 text-t-grey opacity-1 -bottom-2 group-hover:opacity-100 duration-500 ">
+            <a class="hover:text-t-red" href="#"><i class="fa-solid fa-play"></i></a>
+            <a class="hover:text-t-red"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <!--Image-6-->
+      <div class="group relative overflow-hidden basis-1/3 md:basis-1/4 lg:basis-1/3">
+        <!--Image-->
+        <img src="./images/6.jpg" class="group-hover:scale-110 group-hover:opacity-50 duration-500">
+        <!--Image Detail Container-->
+        <div class="absolute px-6 bottom-8">
+          <h3 class="text-t-grey group-hover:text-t-melon group-hover:mb-2 duration-500">10 things ı hate about you</h3>
+          <p class="text-xs opacity-0 group-hover:opacity-100 group-hover:mb-10 duration-500 text-t-grey">High school romance, rebellious girl, charming boy, Shakespeare adaptation, witty comedy.</p>
+          <!--Icons Container-->
+          <div class=" absolute flex space-x-8 text-t-grey opacity-1 -bottom-2 group-hover:opacity-100 duration-500 ">
+            <a class="hover:text-t-red" href="#"><i class="fa-solid fa-play"></i></a>
+            <a class="hover:text-t-red"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+       <!--Image-7-->
+       <div class="group relative overflow-hidden basis-1/3 md:basis-1/4 lg:basis-1/3 hidden md:block lg:hidden">
+        <!--Image-->
+        <img src="./images/7.jpg" class="group-hover:scale-110 group-hover:opacity-50 duration-500">
+        <!--Image Detail Container-->
+        <div class="absolute px-6 bottom-8">
+          <h3 class="text-t-grey group-hover:text-t-melon group-hover:mb-2 duration-500">clueless</h3>
+          <p class="text-xs opacity-0 group-hover:opacity-100 group-hover:mb-10 duration-500 text-t-grey">Teen comedy, fashion, Beverly Hills, matchmaking, high school life, 90s classic.</p>
+          <!--Icons Container-->
+          <div class=" absolute flex space-x-8 text-t-grey opacity-1 -bottom-2 group-hover:opacity-100 duration-500 ">
+            <a class="hover:text-t-red" href="#"><i class="fa-solid fa-play"></i></a>
+            <a class="hover:text-t-red"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+       <!--Image-8-->
+       <div class="group relative overflow-hidden basis-1/3 md:basis-1/4 lg:basis-1/3 hidden md:block lg:hidden">
+        <!--Image-->
+        <img src="./images/8.jpg" class="group-hover:scale-110 group-hover:opacity-50 duration-500">
+        <!--Image Detail Container-->
+        <div class="absolute px-6 bottom-8">
+          <h3 class="text-t-grey group-hover:text-t-melon group-hover:mb-2 duration-500">little woman</h3>
+          <p class="text-xs opacity-0 group-hover:opacity-100 group-hover:mb-10 duration-500 text-t-grey">Sisters' lives, Civil War era, love, dreams, challenges, personal growth.</p>
+          <!--Icons Container-->
+          <div class=" absolute flex space-x-8 text-t-grey opacity-1 -bottom-2 group-hover:opacity-100 duration-500 ">
+            <a class="hover:text-t-red" href="#"><i class="fa-solid fa-play"></i></a>
+            <a class="hover:text-t-red"  href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Right content-->
+  <div class="basis-1/3 pl-10 lg:pl-0">
+    <!--Title-->
+    <h2 class="text-t-grey mb-8">hot news</h2>
+    <!--News Container-->
+    <div class="flex flew-row lg:flex-col lg:h-full lg:pb-16 justify-start lg:justify-between flex-wrap lg:flex-nowrap space-y-4 ">
+      <!--Item-->
+      <div class="flex items-center group basis-3/4 md:basis-1/2">
+        <!--News Image Container-->
+        <div class="basis-1/3 h-full">
+          <img src="./images/n1.jpg" alt="h-full w-full object-cover">
+        </div>
+        <!--Item Details-->
+        <div class="pl-8 basis-2/3 text-t-grey group-hover:text-t-melon group-hover:cursor-pointer duration-500">
+          <p class="text-sm">A family in 1630s New England is torn apart by the forces of witchcraft, black magic and possession.</p>
+          <p class="text-xs tracking-tighter mt-2  font-bold font-gemunu">JANUARY 27, 2015</p>
+        </div>
+      </div>
+      <!--Item-->
+      <div class="flex items-center group basis-3/4 md:basis-1/2">
+        <!--News Image Container-->
+        <div class="basis-1/3 h-full">
+          <img src="./images/n2.jpg" alt="h-full w-full object-cover">
+        </div>
+        <!--Item Details-->
+        <div class="pl-8 basis-2/3 text-t-grey group-hover:text-t-melon group-hover:cursor-pointer duration-500">
+          <p class="text-sm">Heist gone wrong, betrayal, violence, tension, gangsters, loyalty, iconic dialogue.</p>
+          <p class="text-xs tracking-tighter mt-2  font-bold font-gemunu">JANUARY 21, 1992</p>
+        </div>
+      </div>
+      <!--Item-->
+      <div class="flex items-center group basis-3/4 md:basis-1/2">
+        <!--News Image Container-->
+        <div class="basis-1/3 h-full">
+          <img src="./images/n3.jpg" alt="h-full w-full object-cover">
+        </div>
+        <!--Item Details-->
+        <div class="pl-8 basis-2/3 text-t-grey group-hover:text-t-melon group-hover:cursor-pointer duration-500">
+          <p class="text-sm">Weatherman relives same day repeatedly, learns life lessons, comedy classic.</p>
+          <p class="text-xs tracking-tighter mt-2  font-bold font-gemunu">FABRUARY 12, 1993</p>
+        </div>
+      </div>
+      <!--Item-->
+      <div class="flex items-center group basis-3/4 md:basis-1/2">
+        <!--News Image Container-->
+        <div class="basis-1/3 h-full">
+          <img src="./images/n4.jpg" alt="h-full w-full object-cover">
+        </div>
+        <!--Item Details-->
+        <div class="pl-8 basis-2/3 text-t-grey group-hover:text-t-melon group-hover:cursor-pointer duration-500">
+          <p class="text-sm">Charming bear, stolen book, adventure, family, friendship, delightful, heartwarming, comedy.</p>
+          <p class="text-xs tracking-tighter mt-2  font-bold font-gemunu">DECEMBER 26, 2014</p>
+        </div>
+      </div>
+      <!--Item-->
+      <div class="flex items-center group basis-3/4 md:basis-1/2 md:hidden lg:flex">
+        <!--News Image Container-->
+        <div class="basis-1/3 h-full">
+          <img src="./images/n5.jpg" alt="h-full w-full object-cover">
+        </div>
+        <!--Item Details-->
+        <div class="pl-8 basis-2/3 text-t-grey group-hover:text-t-melon group-hover:cursor-pointer duration-500">
+          <p class="text-sm">Whimsical Paris, shy waitress, secret deeds, love quest, quirky romance.</p>
+          <p class="text-xs tracking-tighter mt-2  font-bold font-gemunu">NOVEMBER 23, 2001</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+
+  <!--Godfather Section-->
+  <section class="bg-t-white mb-0 ">
+    <!--Godfather Section  Container-->
+    <div class="container flex items-center justify-center relative pl-10 lg:pl-0">
+      <!--Left Content-->
+      <div class="hidden md:block md:basis-1/3 lg:basis-1/2 ">
+        <img src="./images/the-godfather.jpg" alt="" class="lg:absolute lg:bottom-0">
+      </div>
+<!--Right content-->
+<div class="md:basis-2/3 lg:basis-1/2">
+<!--Right content container -->
+<div class="flex flex-col justify-center py-10">
+  <h3 class="tracking-wider text-t-melon">CRİME,BETRAYAL, DRAMA, FAMİLY, REVENGE</h3>
+<h2>the godfather</h2>
+<p class="text-sm mb-2">"A powerful crime family's saga of loyalty, betrayal, and revenge."</p>
+
+<h3 class="tracking-wider text-t-red">14 wins, 48 Nominations </h3>
+</div>
+</div>
+<!--oldie-->
+<div class="left-10 absolute -top-12 lg:left-0 w-24 h-24 bg-t-melon rounded-full text-center flex items-center">
+<p class="font-gemunu uppercase font-bold text-xl text-t-red ">Old and gold</p>
+</div>
+    </div>
+  </section>
+
+
+  <!--Post Section-->
+  <section class="py-24 dark:bg-black bg-white dark:text-t-grey text-black" >
+    <!--Contianer-->
+    <div class="container px-10 lg:px-0">
+      <!--Title-->
+      <h2 class="text-t-red"><a href="#">Popular Posts</a></h2>
+      <!--Grid Area-->
+      <div class="grid grid-cols-6 gap-10">
+        <!--Item 1-->
+        <div class="col-span-6 md:col-span-3 border border-t-red">
+          <!--Item 1 header-->
+          <div class="border-b border-t-red p-4 flex items-center justify-between">
+            <h3>TITLE FOR POSTS...</h3>
+            <img src="./images/user.png" alt="" class="rounded-full">
+          </div>
+          <!--Item 1 paragraph-->
+          <p class="p-4 text-sm">Because brain science is a fast-moving field, it’s rare to step back to view the lay of the
+            land, to work out what our studies mean for our lives, to discuss in a plain and simple way
+            what it means to be a biological creature. This book sets out to do that.</p>
+            <!--Item 1 Footer-->
+<div class="border-t border-t-red p-4 flex items-center justify-end space-x-4 font-bold font-gemunu text-xs">
+  <p>ON AUGUST 23, 2024</p>
+  <div class="flex items-center justify-center space-x-1">
+<i class="fa-regular fa-comment"></i>
+<p>12</p>
+<i class="fa-regular fa-heart"></i>
+<p>22</p>
+  </div>
+</div>
+        </div>
+
+     <!--Item 2-->
+     <div class="col-span-6 md:col-span-3 border border-t-red">
+      <!--Item 2 header-->
+      <div class="border-b border-t-red p-4 flex items-center justify-between">
+        <h3>TITLE FOR POSTS...</h3>
+        <img src="./images/user.png" alt="" class="rounded-full">
+      </div>
+      <!--Item 2 paragraph-->
+      <p class="p-4 text-sm">Because brain science is a fast-moving field, it’s rare to step back to view the lay of the
+        land, to work out what our studies mean for our lives, to discuss in a plain and simple way
+        what it means to be a biological creature. This book sets out to do that.</p>
+        <!--Item 2 Footer-->
+<div class="border-t border-t-red p-4 flex items-center justify-end space-x-4 font-bold font-gemunu text-xs">
+<p>ON AUGUST 23, 2024</p>
+<div class="flex items-center justify-center space-x-1">
+<i class="fa-regular fa-comment"></i>
+<p>12</p>
+<i class="fa-regular fa-heart"></i>
+<p>22</p>
+</div>
+</div>
+    </div>
+
+         <!--Item 3-->
+         <div class="col-span-6 md:col-span-3 lg:col-span-2 border border-t-red">
+          <!--Item 3 header-->
+          <div class="border-b border-t-red p-4 flex items-center justify-between">
+            <h3>TITLE FOR POSTS...</h3>
+            <img src="./images/user.png" alt="" class="rounded-full">
+          </div>
+          <!--Item 3 paragraph-->
+          <p class="p-4 text-sm">Because brain science is a fast-moving field, it’s rare to step back to view the lay of the
+            land, to work out what our studies mean for our lives, to discuss in a plain and simple way
+            what it means to be a biological creature. This book sets out to do that.</p>
+            <!--Item 3 Footer-->
+<div class="border-t border-t-red p-4 flex items-center justify-end space-x-4 font-bold font-gemunu text-xs">
+  <p>ON AUGUST 23, 2024</p>
+  <div class="flex items-center justify-center space-x-1">
+<i class="fa-regular fa-comment"></i>
+<p>12</p>
+<i class="fa-regular fa-heart"></i>
+<p>22</p>
+  </div>
+</div>
+        </div>
+
+             <!--Item 4-->
+             <div class="col-span-6 md:col-span-3 lg:col-span-2 border border-t-red">
+              <!--Item 4 header-->
+              <div class="border-b border-t-red p-4 flex items-center justify-between">
+                <h3>TITLE FOR POSTS...</h3>
+                <img src="./images/user.png" alt="" class="rounded-full">
+              </div>
+              <!--Item 4 paragraph-->
+              <p class="p-4 text-sm">Because brain science is a fast-moving field, it’s rare to step back to view the lay of the
+                land, to work out what our studies mean for our lives, to discuss in a plain and simple way
+                what it means to be a biological creature. This book sets out to do that.</p>
+                <!--Item 4 Footer-->
+    <div class="border-t border-t-red p-4 flex items-center justify-end space-x-4 font-bold font-gemunu text-xs">
+      <p>ON AUGUST 23, 2024</p>
+      <div class="flex items-center justify-center space-x-1">
+    <i class="fa-regular fa-comment"></i>
+    <p>12</p>
+    <i class="fa-regular fa-heart"></i>
+    <p>22</p>
+      </div>
+    </div>
+            </div>
+                 <!--Item 5-->
+        <div class="hidden lg:block lg:col-span-2 border border-t-red">
+          <!--Item 5 header-->
+          <div class="border-b border-t-red p-4 flex items-center justify-between">
+            <h3>TITLE FOR POSTS...</h3>
+            <img src="./images/user.png" alt="" class="rounded-full">
+          </div>
+          <!--Item 5 paragraph-->
+          <p class="p-4 text-sm">Because brain science is a fast-moving field, it’s rare to step back to view the lay of the
+            land, to work out what our studies mean for our lives, to discuss in a plain and simple way
+            what it means to be a biological creature. This book sets out to do that.</p>
+            <!--Item 5 Footer-->
+<div class="border-t border-t-red p-4 flex items-center justify-end space-x-4 font-bold font-gemunu text-xs">
+  <p>ON AUGUST 23, 2024</p>
+  <div class="flex items-center justify-center space-x-1">
+<i class="fa-regular fa-comment"></i>
+<p>12</p>
+<i class="fa-regular fa-heart"></i>
+<p>22</p>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Footer Section-->
+  <footer class="dark:bg-black bg-white dark:text-t-grey tezt-black">
+    <!--Footer Container-->
+    <div class="container flex flex-col md:flex-row px-10 lg:px-0 pb-8">
+      <!--Left-->
+      <div class="basis-1/3">
+        <a href="#"
+        class="text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-t-red to-t-white">TEWİ</a>
+        <p class="text-sm mt-2">2024 TailWind &copy; COPYRIGHT</p>
+      </div>
+      <!--Middle-->
+      <div class="basis-1/3">
+        <h2 class="mb-2 text-t-red">LINKS</h2>
+        <div class="grid grid-cols-5 gap-2 uppercase">
+          <a class="col-span-2 hover:text-t-melon duration-500" href="#">Movies</a>
+          <a class="col-span-2 hover:text-t-melon duration-500" href="#">Celebrities</a>
+          <a class="col-span-2 hover:text-t-melon duration-500" href="#">Blog</a>
+          <a class="col-span-2 hover:text-t-melon duration-500" href="#">News</a>
+          <a class="col-span-2 hover:text-t-melon duration-500" href="#">About</a>
+        </div>
+      </div>
+      <!--Right-->
+      <div class="basis-1/3">
+        <h2 class="mb-2 text-t-red">Follow Us</h2>
+        <form class="flex" action="">
+          <input class=" bg-transparent border border-t-red placeholder:text-xs outline-none" placeholder="TYPE YOUR EMAİL" type="text">
+          <button 
+          class="py-1 px-2  border border-t-red bg-t-red font font-gemunu uppercase" >SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+<script src="./js/script.js"></script>
+
 </body>
+
 </html>
